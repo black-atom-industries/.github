@@ -1,0 +1,36 @@
+name: Bug
+description: Report something that isn't working correctly
+type: Bug
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What's broken?
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What does this block or affect?
+    validations:
+      required: false
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction Steps
+      description: How can this be reproduced?
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: false
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Related issues, PRs, docs, or error output
+    validations:
+      required: false
