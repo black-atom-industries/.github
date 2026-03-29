@@ -1,4 +1,4 @@
-name: Claude Code (Shared)
+name: Claude
 
 on:
   workflow_call:
