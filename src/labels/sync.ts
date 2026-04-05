@@ -41,7 +41,7 @@ async function getCategoryForRepo(repo: string): Promise<string | null> {
         "repositoryTopics",
     ]);
 
-    const topicNames = result.repositoryTopics.map((t) => t.name);
+    const topicNames = (result.repositoryTopics ?? []).map((t) => t.name);
     const categoryKeys = Object.keys(config.categories);
 
     for (const category of categoryKeys) {
