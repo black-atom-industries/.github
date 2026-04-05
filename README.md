@@ -5,7 +5,9 @@ Org-level configuration for Black Atom Industries: issue templates, label manage
 ## What's here
 
 ```
-.github/ISSUE_TEMPLATE/   # Org-wide issue templates (Feature, Bug)
+.github/ISSUE_TEMPLATE/   # Org-wide issue templates
+  feature.md              #   Feature proposal (markdown)
+  bug.yml                 #   Bug report (YAML form, auto-assigns Bug type)
 src/labels/               # Label sync tooling (config, sync, types)
 src/gh-cli/               # Thin Deno wrapper around `gh` CLI
 .githooks/                # Pre-commit hook (runs checks)

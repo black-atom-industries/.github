@@ -48,7 +48,7 @@ gh repo edit black-atom-industries/core --add-topic black-atom-core
 gh repo edit black-atom-industries/core --remove-topic old-topic
 ```
 
-**BAI categories**: `black-atom-core`, `black-atom-adapter`, `black-atom-tool`, `black-atom-plugin`, `black-atom-meta`, `black-atom-web`
+**BAI categories**: `black-atom-core`, `black-atom-adapter`, `black-atom-app`, `black-atom-tool`, `black-atom-plugin`, `black-atom-meta`, `black-atom-web`
 
 ### Labels
 
