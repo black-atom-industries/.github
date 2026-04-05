@@ -53,8 +53,8 @@ async function getCategoryForRepo(repo: string): Promise<string | null> {
     return null;
 }
 
-function getDesiredLabels(category: string): Label[] {
-    const topicLabels = config.categories[category]?.topicLabels ?? [];
+function getDesiredLabels(category: string | null): Label[] {
+    const topicLabels = category ? config.categories[category]?.topicLabels ?? [] : [];
     return [...config.orgWideLabels, ...topicLabels];
 }
 
@@ -79,10 +79,10 @@ async function syncRepo(repo: string, dryRun: boolean): Promise<void> {
 
     const category = await getCategoryForRepo(repo);
     if (!category) {
-        console.log(`  ${yellow("WARN: no category topic found")}`);
-        return;
+        console.log(`  ${yellow("WARN: no category topic — applying org-wide labels only")}`);
+    } else {
+        console.log(`  ${dim(`Category: ${category}`)}`);
     }
-    console.log(`  ${dim(`Category: ${category}`)}`);
 
     const currentLabels = await ghJson<CurrentLabel[]>([
         "label",
