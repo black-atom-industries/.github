@@ -23,8 +23,7 @@
         "proseWrap": "preserve",
         "exclude": [
             ".github/",
-            ".claude/",
-            "scripts/"
+            ".claude/"
         ]
     },
     "imports": {

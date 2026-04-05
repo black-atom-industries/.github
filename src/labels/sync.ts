@@ -79,7 +79,7 @@ async function syncRepo(repo: string, dryRun: boolean): Promise<void> {
 
     const category = await getCategoryForRepo(repo);
     if (!category) {
-        console.log(`  ${dim("SKIP: no category topic found")}`);
+        console.log(`  ${yellow("WARN: no category topic found")}`);
         return;
     }
     console.log(`  ${dim(`Category: ${category}`)}`);
