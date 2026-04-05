@@ -11,7 +11,6 @@ export const config: LabelConfig = {
             description: "Blocked by an external dependency or constraint",
         },
         { name: "state:reviewed", color: "0E8A16", description: "Review completed" },
-        { name: "state:stale", color: "D4C5F9", description: "No activity, needs triage" },
         { name: "contrib:good-first-issue", color: "7057FF", description: "Good for newcomers" },
         {
             name: "contrib:help-wanted",
