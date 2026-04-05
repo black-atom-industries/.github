@@ -79,7 +79,14 @@ async function syncRepo(repo: string, dryRun: boolean): Promise<void> {
 
     const category = await getCategoryForRepo(repo);
     if (!category) {
-        console.log(`  ${yellow("WARN: no category topic — applying org-wide labels only")}`);
+        const knownCategories = Object.keys(config.categories).join(", ");
+        console.log(
+            `  ${yellow("WARN: uncategorized repo — org-wide labels only, no topic labels")}`,
+        );
+        console.log(
+            `  ${yellow("ACTION: add a GitHub topic to this repo or a new category to config.ts")}`,
+        );
+        console.log(`  ${dim(`Known categories: ${knownCategories}`)}`);
     } else {
         console.log(`  ${dim(`Category: ${category}`)}`);
     }

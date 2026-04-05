@@ -37,6 +37,12 @@ export const config: LabelConfig = {
                 { name: "topic:templates", color: "0075CA", description: "Config templates" },
             ],
         },
+        "black-atom-app": {
+            topicLabels: [
+                { name: "topic:cli", color: "0075CA", description: "CLI tooling" },
+                { name: "topic:ui", color: "0075CA", description: "User interface" },
+            ],
+        },
         "black-atom-tool": {
             topicLabels: [
                 { name: "topic:cli", color: "0075CA", description: "CLI tooling" },
