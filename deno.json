@@ -1,0 +1,34 @@
+{
+    "$schema": "https://raw.githubusercontent.com/denoland/deno/main/cli/schemas/config-file.v1.json",
+    "tasks": {
+        "check": "deno check src/**/*.ts",
+        "test": "deno test --allow-run --allow-net",
+        "checks": "deno fmt --check && deno lint && deno task check && deno task test",
+        "sync-labels": "deno run --allow-run src/labels/sync.ts",
+        "sync-labels:dry": "deno run --allow-run src/labels/sync.ts --dry-run",
+        "install-hooks": "git config core.hooksPath .githooks && echo 'Hooks installed.'"
+    },
+    "lint": {
+        "exclude": [
+            "deno.lock",
+            "deno.json"
+        ]
+    },
+    "fmt": {
+        "useTabs": false,
+        "lineWidth": 100,
+        "indentWidth": 4,
+        "semiColons": true,
+        "singleQuote": false,
+        "proseWrap": "preserve",
+        "exclude": [
+            ".github/",
+            ".claude/",
+            "scripts/"
+        ]
+    },
+    "imports": {
+        "@std/fmt/colors": "jsr:@std/fmt@1.0.5/colors",
+        "@std/assert": "jsr:@std/assert@^1.0.0"
+    }
+}
