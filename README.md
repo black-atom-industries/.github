@@ -30,18 +30,19 @@ deno task sync-labels -- core livery
 
 Repos are discovered via `gh repo list` and categorized by their GitHub repository topic:
 
-| Topic                | Repos                 | Topic labels                          |
-| -------------------- | --------------------- | ------------------------------------- |
-| `black-atom-core`    | core                  | cli, themes, tokens, templates, build |
-| `black-atom-adapter` | nvim, zed, etc.       | tokens, templates                     |
-| `black-atom-tool`    | livery, helm, shiplog | cli, config                           |
-| `black-atom-plugin`  | radar.nvim, etc.      | _(none)_                              |
-| `black-atom-meta`    | .github               | ci                                    |
-| `black-atom-web`     | website, ui           | components, content, design           |
+| Topic                | Repos            | Topic labels                          |
+| -------------------- | ---------------- | ------------------------------------- |
+| `black-atom-core`    | core             | cli, themes, tokens, templates, build |
+| `black-atom-adapter` | nvim, zed, etc.  | tokens, templates                     |
+| `black-atom-app`     | atlas, helm      | cli, ui                               |
+| `black-atom-tool`    | livery, shiplog  | cli, config                           |
+| `black-atom-plugin`  | radar.nvim, etc. | _(none)_                              |
+| `black-atom-meta`    | .github          | ci                                    |
+| `black-atom-web`     | website, ui      | components, content, design           |
 
-Repos without a recognized topic are skipped with a warning.
+Repos without a recognized topic get org-wide labels applied and a warning with instructions to add a category.
 
-All repos also get the 6 org-wide labels: `state:needs-review`, `state:blocked`, `state:reviewed`, `state:stale`, `contrib:good-first-issue`, `contrib:help-wanted`.
+All repos also get the 5 org-wide labels: `state:needs-review`, `state:blocked`, `state:reviewed`, `contrib:good-first-issue`, `contrib:help-wanted`.
 
 Labels matching `protectedLabels` in config (e.g. `autorelease: *`) are never deleted.
 
