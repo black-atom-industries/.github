@@ -2,6 +2,8 @@
 
 Org-level configuration for Black Atom Industries: issue templates, label management, and shared tooling.
 
+`./install.sh` links [`AGENTS.md`](AGENTS.md) to the folder above this repo, so agent sessions in every sibling repo load it.
+
 ## What's here
 
 ```
