@@ -34,15 +34,16 @@ deno task sync-labels -- core livery
 
 Repos are discovered via `gh repo list` and categorized by their GitHub repository topic:
 
-| Topic                | Repos            | Topic labels                          |
-| -------------------- | ---------------- | ------------------------------------- |
-| `black-atom-core`    | core             | cli, themes, tokens, templates, build |
-| `black-atom-adapter` | nvim, zed, etc.  | tokens, templates                     |
-| `black-atom-app`     | atlas, helm      | cli, ui                               |
-| `black-atom-tool`    | livery, shiplog  | cli, config                           |
-| `black-atom-plugin`  | radar.nvim, etc. | _(none)_                              |
-| `black-atom-meta`    | .github          | ci                                    |
-| `black-atom-web`     | website, ui      | components, content, design           |
+| Topic                 | Repos            | Topic labels                          |
+| --------------------- | ---------------- | ------------------------------------- |
+| `black-atom-core`     | core             | cli, themes, tokens, templates, build |
+| `black-atom-adapter`  | nvim, zed, etc.  | tokens, templates                     |
+| `black-atom-app`      | atlas, helm      | cli, ui                               |
+| `black-atom-tool`     | livery, shiplog  | cli, config                           |
+| `black-atom-plugin`   | radar.nvim, etc. | _(none)_                              |
+| `black-atom-meta`     | .github          | ci                                    |
+| `black-atom-web`      | website, ui      | components, content, design           |
+| `black-atom-monorepo` | black-atom       | one `adapter:*` per adapter           |
 
 Repos without a recognized topic get org-wide labels applied and a warning with instructions to add a category.
 

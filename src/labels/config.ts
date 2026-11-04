@@ -57,6 +57,28 @@ export const config: LabelConfig = {
                 { name: "topic:ci", color: "0075CA", description: "CI/CD and GitHub Actions" },
             ],
         },
+        "black-atom-monorepo": {
+            topicLabels: [
+                {
+                    name: "adapter:claude-code",
+                    color: "5319E7",
+                    description: "Claude Code adapter",
+                },
+                { name: "adapter:delta", color: "5319E7", description: "delta adapter" },
+                { name: "adapter:ghostty", color: "5319E7", description: "Ghostty adapter" },
+                { name: "adapter:herdr", color: "5319E7", description: "Herdr adapter" },
+                { name: "adapter:kagi", color: "5319E7", description: "Kagi adapter" },
+                { name: "adapter:lazygit", color: "5319E7", description: "lazygit adapter" },
+                { name: "adapter:niri", color: "5319E7", description: "niri adapter" },
+                { name: "adapter:nvim", color: "5319E7", description: "Neovim adapter" },
+                { name: "adapter:obsidian", color: "5319E7", description: "Obsidian adapter" },
+                { name: "adapter:tmux", color: "5319E7", description: "tmux adapter" },
+                { name: "adapter:tuicr", color: "5319E7", description: "tuicr adapter" },
+                { name: "adapter:waybar", color: "5319E7", description: "Waybar adapter" },
+                { name: "adapter:wezterm", color: "5319E7", description: "WezTerm adapter" },
+                { name: "adapter:zed", color: "5319E7", description: "Zed adapter" },
+            ],
+        },
         "black-atom-web": {
             topicLabels: [
                 { name: "topic:components", color: "0075CA", description: "UI components" },
