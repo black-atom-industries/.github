@@ -45,7 +45,7 @@ Repos are discovered via `gh repo list` and categorized by their GitHub reposito
 | `black-atom-web`      | website, ui      | components, content, design           |
 | `black-atom-monorepo` | black-atom       | one `adapter:*` per adapter           |
 
-Repos without a recognized topic get org-wide labels applied and a warning with instructions to add a category.
+Repos without a recognized topic get org-wide labels applied and a warning with instructions to add a category. They keep their other labels, because the topic may only look unknown to a stale checkout.
 
 All repos also get the 5 org-wide labels: `state:needs-review`, `state:blocked`, `state:reviewed`, `contrib:good-first-issue`, `contrib:help-wanted`.
 

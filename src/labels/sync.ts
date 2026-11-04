@@ -105,10 +105,15 @@ async function syncRepo(repo: string, dryRun: boolean): Promise<void> {
     const desiredLabels = getDesiredLabels(category);
     const desiredNames = new Set(desiredLabels.map((l) => l.name));
 
-    // Delete labels not in desired set (unless protected)
+    // Delete labels not in desired set (unless protected). An unrecognized topic may come from a
+    // stale config, so an uncategorized repo keeps its other labels.
     for (const label of currentLabels) {
         if (isProtected(label.name)) {
             console.log(`  ${dim(`KEEP (protected): ${label.name}`)}`);
+            continue;
+        }
+        if (!desiredNames.has(label.name) && !category) {
+            console.log(`  ${dim(`KEEP (uncategorized repo): ${label.name}`)}`);
             continue;
         }
         if (!desiredNames.has(label.name)) {
