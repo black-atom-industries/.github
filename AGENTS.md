@@ -13,7 +13,7 @@ gh repo list black-atom-industries --no-archived
 ```
 
 - `black-atom` holds the themes, their adapters and Livery.
-- `helm`, `helm.herdr` and `helm.tmux` are one idea per multiplexer: a popup to reach every session. `helm.tmux` owns
+- `helm` and `helm.tmux` are one idea per multiplexer: a popup to reach every session. `helm.tmux` owns
   `~/.local/bin/helm`, which `dots pull` and `dots push` call.
 - `iter.nvim` defines highlight groups that `black-atom/adapters/nvim` overrides, so a highlight change can involve both.
 
